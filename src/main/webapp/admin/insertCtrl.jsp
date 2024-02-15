@@ -12,10 +12,11 @@
 	dto.setPrice(price);
 	
 	MenuService menuSrv = Factory.INSTANCE.getMenuSrv();
+	
 	if(menuSrv.save(dto)==1){
-		System.out.print("메뉴추가성공했습니다.");
+		System.out.print("등록완료되었습니다.");
 	}else{
-		System.out.print("메뉴추가실패했습니다.");
+		System.out.print("등록실패");
 	}
 	
 	response.sendRedirect("./admin.jsp");

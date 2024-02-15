@@ -16,6 +16,7 @@
 	logininfo.put("userid", userid);
 	logininfo.put("password",password);
 	
+	
 	UserService userSrv = Factory.INSTANCE.getUserSrv();
 	userDTO dto = userSrv.getOne(logininfo);
 	System.out.println(dto);

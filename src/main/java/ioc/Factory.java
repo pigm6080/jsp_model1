@@ -18,7 +18,9 @@ public enum Factory {
 	
 	INSTANCE;
 	
+	//sqlSEssionFactory 객체에 MyBatisManger에서 생성한 객체를 받아온다.
 	private SqlSessionFactory sqlSessionFactory = MyBatisManager.getSqlSessionFactory();
+	//sqlSessionFactory에서 sqlSession객체를 받아온다. openSession(false)로 함으로 autocommit 방지
 	private SqlSession sqlSession = sqlSessionFactory.openSession(false);
 	
 	private MenuMapper menuDao = new MenuMapperDAO(sqlSession);
@@ -26,6 +28,7 @@ public enum Factory {
 	public MenuService getMenuSrv() {
 		return menuSrv;
 	}
+	
 	
 	private UserMapper userDAO = new UserMapperDAO(sqlSession);
 	private UserService userSrv = new UserServicelmpl(userDAO);

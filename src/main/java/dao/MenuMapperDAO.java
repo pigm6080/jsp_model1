@@ -30,6 +30,7 @@ public class MenuMapperDAO implements MenuMapper {
 		int result = 0;
 		
 		try {
+			System.out.println("DAO ="+vo);
 			result = mp().save(vo);
 			sqlSession.commit();
 		}catch(Exception e) {

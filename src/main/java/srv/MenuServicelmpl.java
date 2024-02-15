@@ -17,12 +17,10 @@ public class MenuServicelmpl implements MenuService{
 
 	@Override
 	public List<menuDTO> findAll() {
-		System.out.println("Here1!");
 		
 		List<menuVO> daoList = menuDao.findAll();
 		List<menuDTO> list = null;
 		
-		System.out.println("Here!");
 		if(daoList != null) {
 			list = new ArrayList<menuDTO>();
 			
@@ -50,7 +48,7 @@ public class MenuServicelmpl implements MenuService{
 		vo.setName(dto.getName());
 		vo.setPrice(dto.getPrice());
 		
-		return 0;
+		return menuDao.save(vo);
 	}
 	
 	

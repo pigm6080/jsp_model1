@@ -9,10 +9,11 @@ import model.userVO;
 public class UserServicelmpl implements UserService{
 	
 	private UserMapper userDAO;
-	
+	//팩토리에서받아온 DAO를 생성자를 통해 현재 userDAO객체로 초기화
 	public UserServicelmpl(UserMapper userDAO) {
 		this.userDAO = userDAO;
 	}
+	
 	@Override
 	public userDTO getOne(Map<String, String> loginInfo) {
 		

@@ -10,4 +10,8 @@
   		select * from menu order by menuid asc;
   	</select>
   	
+  	<insert id="save" parameterType="mVO">
+  		INSERT INTO menu(name, price,cnt) values(#{name},#{price},0);
+  	</insert>
+  	
   </mapper>

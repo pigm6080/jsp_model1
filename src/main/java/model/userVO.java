@@ -6,17 +6,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
+@ToString
 @NoArgsConstructor
-public class menuVO implements Serializable{
+@AllArgsConstructor
+public class userVO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private int menuid;
-	private int price;
+	private String userid;
+	private String password;
 	private String name;
-	private int cnt;
+
 }

@@ -6,14 +6,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter
-@AllArgsConstructor
 @Getter
-@NoArgsConstructor
+@Setter
 @ToString
-public class menuDTO {
-	private int menuid;
-	private int price;
+@AllArgsConstructor
+@NoArgsConstructor
+public class userDTO {
+	private String userid;
+	private String password;
 	private String name;
-	private int cnt;
 }

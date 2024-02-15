@@ -6,6 +6,7 @@
 
   <typeAliases>
   	<typeAlias type="model.menuVO" alias="mVO" />
+  	<typeAlias type="model.userVO" alias="uVO" />
   </typeAliases>	
   
   
@@ -14,7 +15,7 @@
       <transactionManager type="JDBC"/>
       <dataSource type="POOLED">
         <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/mvc1"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/dodream"/>
         <property name="username" value="root"/>
         <property name="password" value="1234"/>
       </dataSource>
@@ -24,6 +25,7 @@
   <mappers>
   	<!-- SQL 쿼리를 정의한 xml 설정파일 -->
     <mapper resource="myBatis/mapper/MenuMapper.xml"/>
+    <mapper resource="myBatis/mapper/UserMapper.xml"/>
   </mappers>
   
 </configuration>

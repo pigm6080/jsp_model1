@@ -21,7 +21,7 @@
 </head>
 <body>
 	<div id = "wrap">
-		<h1>현우의 카페관리 프로젝트</h1>
+		<h1>${name }님의 관리자 페이지</h1>
 		
 		<table>
 			<thead>
@@ -44,7 +44,7 @@
 			</tbody>
 		</table>
 		
-		<p><a id="btn" href="./admin/login.jsp">관리자 로그인</a></p>
+		<p><a id="btn" href="./insert.jsp">메뉴 추가</a></p>
 		
 	</div>
 </body>
